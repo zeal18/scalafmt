@@ -668,3 +668,14 @@ class A {
 class B {
   import foo._
 }
+<<< preserve spacing without grouping
+rewrite.imports.expand = true
+rewrite.imports.sort = original
+===
+import bar.a
+
+import bar.b
+>>>
+import bar.a
+
+import bar.b
